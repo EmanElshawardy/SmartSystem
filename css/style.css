@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --first-color: #00ccff;
+  --second-color: #ea047e;
+  --third-color: #fff80a;
+  --first-bg: #0c1022;
+}
+body {
+  background-color: #010810;
+}
+a {
+  text-decoration: none;
+}
+img{mix-blend-mode: multiply;}
+.form {
+  width: 400px;
+  height: 470px;
+  border-radius: 50px 0px;
+}
+.form::before {
+  content: "";
+  position: absolute;
+  width: 170%;
+  height: 170%;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    var(--second-color)
+  );
+  animation: border-rotate 6s linear infinite;
+}
+.form::after {
+  position: absolute;
+  width: 170%;
+  height: 170%;
+  content: "";
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    var(--third-color)
+  );
+  animation: border-rotate 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes border-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.style-form {
+  background: var(--first-bg);
+  border-radius: 50px 0px;
+  inset: 5px;
+  padding: 50px 40px;
+  color: var(--first-color);
+}
+.title-style {
+  font-family: "Dai Banna SIL", serif;
+  color: var(--first-color);
+}
+.input-text {
+  width: 95%;
+  height: 30px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--first-color);
+  font-size: 20px;
+  color: var(--first-color);
+  font-size: 15px;
+}
+::placeholder {
+  font-size: 15px;
+  color: #00ccff52;
+  letter-spacing: 1px;
+}
+.fa {
+  text-shadow: 0px 2px 5px var(--first-color);
+}
+.button button {
+  color: var(--first-color);
+  border-radius: 5px;
+  background: linear-gradient(
+    315deg,
+    var(--first-color),
+    var(--first-bg),
+    var(--first-bg),
+    var(--second-color)
+  );
+  /* cursor: pointer; */
+  /* z-index: 0; */
+}
+.button button:hover {
+  color: var(--first-color);
+}
+.button button::before {
+  position: absolute;
+  content: "";
+  top: 1px;
+  right: 1px;
+  bottom: 1px;
+  left: 1px;
+  background-color: var(--first-bg);
+  border-radius: 4px;
+  z-index: -1;
+}
+.creat-acc a {
+  color: var(--first-color);
+  font-size: 18px;
+}

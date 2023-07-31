@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Dai+Banna+SIL:wght@600&family=Inter:wght@200;500&family=Montserrat:wght@900&family=Open+Sans:wght@300&family=Pacifico&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/all.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- Login form -->
+  <div class="container" id=" wrapper ">
+    <form 
+      class="form position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center overflow-hidden"
+      id="login">
+      <div class="style-form position-absolute z-3">
+        <h2 class="title-style text-center">Smart Login System</h2>
+        <div class="input-group mt-5 mb-3 d-flex flex-nowrap align-items-center">
+          <li class="fa fa-envelope fs-5"></li>
+          <input type="email" class="input-text bg-transparent ps-3" id="loginEmail" placeholder="Enter Your Email" />
+        </div>
+        <div class="input-group mb-3 d-flex flex-nowrap align-items-center">
+          <li class="fa fa-unlock-alt fs-5"></li>
+          <input type="password" class="input-text bg-transparent ps-3" id="loginPassword"
+            placeholder="Enter Your Password" />
+            <p id="incorrect"></p>
+        </div>
+        <div class="button pt-5">
+          <a href="#">
+            <button type="button" class="btn btn-style position-relative w-100  border-0 z-0" id="loginBtn">
+              Login
+            </button>
+          </a>
+        </div>
+        <div class="creat-acc d-flex justify-content-between align-items-center mt-3">
+          <h6 class="switch">Don't Have an Account?</h6>
+          <a href="" id="anchorReg" class="mb-2">SignUp</a>
+        </div>
+      </div>
+    </form>
+    <!-- Registration form -->
+    <form
+      class="form position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center overflow-hidden"
+      id="registration">
+      <div class="style-form position-absolute z-3">
+        <h2 class="title-style text-center">Smart SignUp System</h2>
+        <div class="input-group mt-4 mb-3 d-flex flex-nowrap align-items-center">
+          <li class="fa fa-user fs-5"></li>
+          <input type="text" class="input-text bg-transparent ps-3" id="inputName" placeholder="Enter Your Name" />
+        </div>
+        <small id="nameError" class="text-danger ps-3 d-none">At least 3 characters</small>
+        <div class="input-group mb-3 d-flex flex-nowrap align-items-center">
+          <li class="fa fa-envelope fs-5"></li>
+          <input type="email" class="input-text bg-transparent ps-3" id="inputEmail" placeholder="Enter Your Email" />
+        </div>
+        <small id="emailError" class="text-danger ps-3 d-none">Invalid email</small>
+        <div class="input-group mb-3 d-flex flex-nowrap align-items-center">
+          <li class="fa fa-unlock-alt fs-5"></li>
+          <input type="password" class="input-text bg-transparent ps-3" id="inputPassword"
+            placeholder="Enter Your Password" />
+        </div>
+        <small id="passwordError" class="text-danger ps-3 d-none">Assert a string has at least one number Or has at
+          least one special
+          character.</small>
+        <div class="button pt-5">
+          <a>
+            <button type="button" class="btn btn-style position-relative w-100  border-0 z-0" id="signup">
+              Sign Up
+            </button>
+          </a>
+        </div>
+        <div class="creat-acc d-flex justify-content-between align-items-center mt-3">
+          <h6>Already Have an Account?</h6>
+          <a href="#" class="mb-2" id="anchorLog">Signin</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="./js/unpkg.com_sweetalert@2.1.2_dist_sweetalert.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/registration.js"></script>
+  <script src="./js/logIn.js"></script>
+</body>
+
+</html>
