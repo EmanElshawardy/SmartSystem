@@ -8,7 +8,7 @@ loginBtn.addEventListener('click', function() {
    
   var form = {
     password: loginPassword.value,
-    email: loginEmail.value
+    email: loginEmail.value.toLowerCase()
   }
   var formExists = false;
   for (var i = 0; i < formList.length; i++) {
