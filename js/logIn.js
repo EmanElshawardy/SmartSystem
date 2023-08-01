@@ -1,6 +1,7 @@
 let loginEmail = document.getElementById('loginEmail');
 let loginPassword = document.getElementById('loginPassword');
 let loginBtn = document.querySelector('#loginBtn');
+let home=document.getElementById('home')
 var userName
 
 loginBtn.addEventListener('click', function() {
@@ -15,9 +16,11 @@ loginBtn.addEventListener('click', function() {
       formExists = true;
       localStorage.setItem('userName', formList[i].name);
       clearForm()
-      setTimeout(function(){
-        document.location.href = "/home.html"
-    },200);
+    //   setTimeout(function(){
+    //     document.location.href = "./home.html"
+    // },200);
+    formLogin.classList.add('d-none')
+    home.classList.remove('d-none')
     }
   }
   if (!formExists) {
