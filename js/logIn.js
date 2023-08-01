@@ -16,9 +16,6 @@ loginBtn.addEventListener('click', function() {
       formExists = true;
       localStorage.setItem('userName', formList[i].name);
       clearForm()
-    //   setTimeout(function(){
-    //     document.location.href = "./home.html"
-    // },200);
     formLogin.classList.add('d-none')
     home.classList.remove('d-none')
     }
